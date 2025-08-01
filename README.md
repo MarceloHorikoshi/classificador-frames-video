@@ -26,8 +26,18 @@ cd classificador-frames-video
 pip install -r requirements.txt
 ```
 3. BAIXE O VÍDEO.
-- Estou disponibilizando o vídeo que foi utilizado no projeto nesta url [loveletter_bananagrams_caneca.mp4](https://drive.google.com/file/d/1pjKg0DHtc2RHSt25roMVOR5Et2mgfqYn/view?usp=sharing)
-- Coloque o vídeo na mesma estrutura descrita a baixo, dentro da pasta ```data/```
+  - Estou disponibilizando o vídeo que foi utilizado no projeto nesta url [loveletter_bananagrams_caneca.mp4](https://drive.google.com/file/d/1pjKg0DHtc2RHSt25roMVOR5Et2mgfqYn/view?usp=sharing)
+  - Coloque o vídeo na mesma estrutura descrita a baixo, dentro da pasta ```data/```
+  
+4. Baixe ou instale o pacote ffmpeg:
+   - No MacOS eu baixei os pacotes [ffmpeg-7.1.1](https://evermeet.cx/ffmpeg/ffmpeg-7.1.1.zip) e 
+[ffprobe-7.1.1](https://evermeet.cx/ffmpeg/ffprobe-7.1.1.zip) e extrai os zips para dentro de uma pasta chamada ffmpeg
+
+- Não utilizar os comandos abaixo em ambientes que não forem MacOS;
+```
+! xattr -d com.apple.quarantine ffmpeg/ffmpeg
+! xattr -d com.apple.quarantine ffmpeg/ffprobe
+```
 
 # Estrutura do projeto
 
@@ -81,8 +91,6 @@ ffmpeg/                         # Binários do FFmpeg
 
 # Resultados Esperados
 
-- No MacOS eu baixei os pacotes [ffmpeg-7.1.1](https://evermeet.cx/ffmpeg/ffmpeg-7.1.1.zip) e 
-[ffprobe-7.1.1](https://evermeet.cx/ffmpeg/ffprobe-7.1.1.zip) e extrai os zips para dentro de uma pasta chamada ffmpeg
 - Vídeo sem aúdio (``video_sem_audio.mp4``);
 - Áudio extraído (``audio.mp3``);
 - Banco de dados SQLite com tabela chamada ``video_frames`` com frames e metadados;
@@ -96,11 +104,7 @@ ffmpeg/                         # Binários do FFmpeg
 - Para Executar é necessário a pasta ffmpeg para captura e processamento de arquivos de audio, principalmente para 
 conversão para o formato WAV para a transcrição;
 - Para outros sistemas operacionais, pode ser necessário ajustar o caminho do FFmpeg
-- Não utilizar os comandos abaixo em ambientes que não forem MacOS;
-```
-! xattr -d com.apple.quarantine ffmpeg/ffmpeg
-! xattr -d com.apple.quarantine ffmpeg/ffprobe
-```
+
 
 Autor
 Marcelo Horikoshi Candido da Silva
