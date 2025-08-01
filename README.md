@@ -30,7 +30,7 @@ pip install -r requirements.txt
   - Coloque o vídeo na mesma estrutura descrita a baixo, dentro da pasta ```data/```
   
 4. Baixe ou instale o pacote ffmpeg:
-   - No MacOS eu baixei os pacotes [ffmpeg-7.1.1](https://evermeet.cx/ffmpeg/ffmpeg-7.1.1.zip) e 
+- No MacOS eu baixei os pacotes [ffmpeg-7.1.1](https://evermeet.cx/ffmpeg/ffmpeg-7.1.1.zip) e 
 [ffprobe-7.1.1](https://evermeet.cx/ffmpeg/ffprobe-7.1.1.zip) e extrai os zips para dentro de uma pasta chamada ffmpeg
 
 - Não utilizar os comandos abaixo em ambientes que não forem MacOS;
@@ -38,6 +38,19 @@ pip install -r requirements.txt
 ! xattr -d com.apple.quarantine ffmpeg/ffmpeg
 ! xattr -d com.apple.quarantine ffmpeg/ffprobe
 ```
+5. Para Linux:
+Tente utilizar o comando a seguir e renomeie a pasta para ***ffmpeg*** dentro do diretório raiz do projeto:
+***Execute esta célula no Jupyter Notebook para baixar e extrair o FFmpeg***
+   
+```bash
+ 
+!wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+!tar -xf ffmpeg-release-amd64-static.tar.xz
+!mv ffmpeg-*-amd64-static ffmpeg 
+```
+
+6. Para Windows
+- No Windows baixe o arquivo ***ffmpeg-git-full*** e extraia no diretório raiz renomeando a pasta para ***ffmpeg***
 
 # Estrutura do projeto
 
