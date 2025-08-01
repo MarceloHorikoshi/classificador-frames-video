@@ -1,0 +1,20 @@
+# audio
+ffmpeg-python==0.2.0
+pydub==0.25.1
+SpeechRecognition==3.14.3
+
+# leitura de vídeo
+moviepy==2.2.1
+
+# Graficos
+seaborn==0.13.2
+
+# Machine Learning
+scipy==1.16.0
+scikit-learn==1.7.1
+scikit-image==0.25.2
+
+# manipulação de imagens
+astropy==7.1.0
+opencv-python==4.12.0.88
+
